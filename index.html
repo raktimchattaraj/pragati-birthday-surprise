@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Pragati Pal 🎂</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff758c,
+            #ff7eb3,
+            #8e7dff,
+            #5ee7df
+        );
+
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    width: 100%;
+    max-width: 480px;
+    min-height: 650px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255,255,255,0.18);
+
+    border:
+        2px solid
+        rgba(255,255,255,0.45);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.25);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =========================
+   SCENES
+========================= */
+
+.scene {
+    display: none;
+    min-height: 590px;
+
+    animation:
+        sceneIn 0.8s ease;
+}
+
+.scene.active {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes sceneIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.7)
+            translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 25px #ff1493;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 15px 0;
+
+    text-shadow:
+        0 0 12px #ff69b4;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    border: none;
+
+    padding: 14px 28px;
+
+    margin-top: 25px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff1493,
+            #ff758c
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,20,147,0.4);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+
+.btn:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo {
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+        6px solid
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 0 30px
+        rgba(255,255,255,0.8);
+
+    animation:
+        photoGlow
+        2s infinite alternate;
+}
+
+@keyframes photoGlow {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon {
+    position: fixed;
+
+    bottom: -120px;
+
+    font-size: 55px;
+
+    animation:
+        balloonFloat
+        8s linear infinite;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.b1 {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.b2 {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.b3 {
+    left: 48%;
+    animation-delay: 4s;
+}
+
+.b4 {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.b5 {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes balloonFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-8deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-120vh)
+            rotate(10deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.candles {
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 10px;
+}
+
+.candle {
+    width: 12px;
+    height: 65px;
+
+    border-radius: 5px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            white 0 7px,
+            #ff69b4 7px 14px
+        );
+
+    position: relative;
+}
+
+.flame {
+    position: absolute;
+
+    width: 18px;
+    height: 25px;
+
+    left: -3px;
+    top: -28px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            yellow,
+            orange,
+            red
+        );
+
+    animation:
+        flame 0.5s infinite alternate;
+}
+
+@keyframes flame {
+
+    from {
+        transform:
+            scale(0.8)
+            rotate(-5deg);
+    }
+
+    to {
+        transform:
+            scale(1.1)
+            rotate(5deg);
+    }
+}
+
+
+.cake {
+    width: 230px;
+    height: 115px;
+
+    margin-top: 25px;
+
+    position: relative;
+
+    transition: 0.5s;
+}
+
+.cake-top {
+    width: 230px;
+    height: 55px;
+
+    border-radius:
+        50% 50% 20% 20%;
+
+    background:
+        linear-gradient(
+            #ff9a9e,
+            #ff4f81
+        );
+
+    position: absolute;
+    top: 0;
+
+    box-shadow:
+        0 8px 15px
+        rgba(0,0,0,0.25);
+}
+
+.cake-body {
+    width: 210px;
+    height: 75px;
+
+    position: absolute;
+
+    top: 35px;
+    left: 10px;
+
+    border-radius:
+        0 0 20px 20px;
+
+    background:
+        linear-gradient(
+            #ffd1dc,
+            #ff8fab
+        );
+}
+
+.cake-decoration {
+    position: absolute;
+
+    top: 58px;
+    left: 25px;
+
+    font-size: 25px;
+
+    letter-spacing: 7px;
+
+    z-index: 3;
+}
+
+
+/* =========================
+   KNIFE
+========================= */
+
+.knife {
+    font-size: 60px;
+
+    margin-top: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    user-select: none;
+}
+
+.knife:hover {
+    transform:
+        rotate(-20deg)
+        scale(1.1);
+}
+
+.cut-animation {
+    animation:
+        cakeCut 0.7s ease;
+}
+
+@keyframes cakeCut {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    30% {
+        transform:
+            rotate(-15deg)
+            translateX(-10px);
+    }
+
+    60% {
+        transform:
+            rotate(15deg)
+            translateX(10px);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+.gift {
+    width: 190px;
+    height: 150px;
+
+    position: relative;
+
+    margin-top: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.gift:hover {
+    transform: scale(1.05);
+}
+
+.gift-box {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 190px;
+    height: 120px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #ff4b2b
+        );
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.3);
+}
+
+.gift-ribbon {
+    position: absolute;
+
+    left: 78px;
+
+    width: 35px;
+    height: 120px;
+
+    background: #ffd700;
+
+    z-index: 2;
+}
+
+.gift-lid {
+    position: absolute;
+
+    top: 0;
+    left: -8px;
+
+    width: 206px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6a88,
+            #ff1744
+        );
+
+    z-index: 3;
+
+    transition:
+        transform 1s ease;
+}
+
+.gift.open .gift-lid {
+    transform:
+        rotate(-18deg)
+        translate(-30px,-70px);
+}
+
+.gift.open {
+    animation:
+        giftShake 0.5s;
+}
+
+@keyframes giftShake {
+
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+
+/* =========================
+   TEDDY
+========================= */
+
+.teddy {
+    font-size: 120px;
+
+    margin-top: 15px;
+
+    display: none;
+
+    animation:
+        teddyPop 1s ease,
+        teddyDance 1s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+.teddy.show {
+    display: block;
+}
+
+@keyframes teddyPop {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.1)
+            translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+@keyframes teddyDance {
+
+    from {
+        transform:
+            rotate(-8deg)
+            translateY(0);
+    }
+
+    to {
+        transform:
+            rotate(8deg)
+            translateY(-12px);
+    }
+}
+
+
+/* =========================
+   KRISHNA IMAGE
+========================= */
+
+.krishna {
+    width: 220px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border:
+        4px solid
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 0 35px
+        rgba(255,255,255,0.8);
+
+    animation:
+        krishnaReveal
+        1.5s ease;
+}
+
+@keyframes krishnaReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.3)
+            rotate(-15deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0);
+    }
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    margin-top: 20px;
+
+    text-shadow:
+        0 0 10px #ff1493;
+}
+
+.signature {
+    margin-top: 25px;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #ff1493,
+        0 0 20px #ff69b4;
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+    position: fixed;
+
+    width: 10px;
+    height: 18px;
+
+    top: -30px;
+
+    z-index: 100;
+
+    animation:
+        confettiFall
+        3s linear forwards;
+
+    pointer-events: none;
+}
+
+@keyframes confettiFall {
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FIREWORK
+========================= */
+
+.firework {
+    position: fixed;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    z-index: 90;
+
+    animation:
+        firework
+        1s ease-out forwards;
+}
+
+@keyframes firework {
+
+    from {
+        transform: scale(0.2);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(25);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px) {
+
+    .container {
+        padding: 12px;
+    }
+
+    .card {
+        min-height: 620px;
+
+        padding:
+            25px 15px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .cake {
+        transform: scale(0.9);
+    }
+
+    .gift {
+        transform: scale(0.9);
+    }
+
+    .photo {
+        width: 145px;
+        height: 145px;
+    }
+
+    .krishna {
+        width: 190px;
+        height: 245px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- FLOATING BALLOONS -->
+
+<div class="balloon b1">🎈</div>
+<div class
